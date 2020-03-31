@@ -2,3 +2,94 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+body{
+  margin:0 auto;
+}
+.responsive{
+  max-width:1000px;
+  margin:0 auto;
+}
+
+/* End */
+
+nav{
+  background:linear-gradient(to bottom left,rgb(144,144,144,144), #e74c3c , #c0392b);
+  overflow:hidden;
+}
+
+/* Start Working here */
+nav ul{ 
+  list-style-type:none; 
+  padding:0;
+  /*- --- - -- - - - - --- - - - --- - - - */
+  /*  عشان متخليش العناصر تدخل في بعض لما تيجي تصغر حجم الشاشه الميزه دي بتخليلك العناصر ينزلو  تحت بعض عشان متبوظش حاجه  flex-wrap:wrap ;بمعني انهم يجو جنب بعضيهم وبعدين حطيت ميزه ال    flex-direction:row;لل default value و ال  flex-direction:row , row-reverse , column , column-reverse; عشان تجبلي العناصر جنب بعضيهم بردو وفي مميزات تانيه ليها زي   flex-direction:row;   للاب بتاع  الديف بتاعك وبعدين قلتلو اعملي  (display:flex;)  مميزات الفليكس بوكس مش هتشتغل فا لزمن تحط  (display:flex;) للعناصر الجوا اليو ال بمعني انو يخليهملي جنب بعضيهم ومن غير   (display:flex;) عشان انا بقولو هنا انو يعملي  (nav)محطتوش عند الاب الاسمو  (ul)نلاحظ هنا اني حطيت  مميزات الفليكس بوكس عند الاب الاسمو  */
+  display:flex; 
+  flex-direction:row;
+  flex-wrap:wrap;
+      justify-content:center;
+  transition:all 0.5s linear;
+}
+nav ul li{
+    transition:all 0.3s linear;
+}
+nav ul li a{
+  text-decoration:none;
+  color:#fff;
+  padding:10px 20px;
+}
+
+/* Start Responsive */
+@media only screen and (max-width:768px){
+  nav ul{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+  }
+  nav ul li{
+    margin:10px;
+  }
+}
+/* End Responsive */
+
+
+/* End */
+
+
+/* Responsive navbar with float */
+.navbar{
+  transition:all 0.5s linear;
+  overflow:hidden;
+  background:linear-gradient(to bottom left,rgb(144,144,144,144), #e74c3c , #c0392b);
+}
+.navbar ul{
+  display:flex;
+  justify-content:center;
+  overflow:hidden;
+  list-style-type:none;
+  padding:0;
+}
+.navbar ul li{
+  float:left;
+  transition:all 0.3s linear;
+}
+.navbar ul li a{
+  text-decoration:none;
+  color:#fff;
+  padding:10px 20px;
+}
+/* Start Responsive */
+@media only screen and (max-width:768px){
+  .navbar ul li{
+     margin:10px;
+    
+    float:none;
+  }
+  .navbar ul{
+   display:block;
+    text-align:center;
+  }
+}
+/* End Responsive */
+
+/* End Responsive Navbar with float */
