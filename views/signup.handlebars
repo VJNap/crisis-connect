@@ -1,15 +1,54 @@
 <h1>Crisis Connect</h1>
-  <nav>
-    <div class="responsive">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/login">Log In</a></li>
-        <li><a href="/signup">Sign Up</a></li>
+      
+      <nav>
+        <div class="responsive">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Log In</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+          </ul>
+      </nav>
+    </div>
+
+  <ul class="menu">
+   <li class="list"><a href="/addgroup">Add Group</a> 
+      <ul class="items">
+         <li><a href="#">Group Name</a></li>
+         <li><a href="#">Group Admin</a></li>
       </ul>
-  </nav>
+   </li>
+   
+   <li class="list"><a href="/members">Members</a> 
+      <ul class="items">
+         <li> <a href="#" >First Name</a></li>
+         <li> <a href="#" >Last Name</a></li>
+         <li> <a href="#" >E-mail</a></li>
+      </ul>
+   </li>
+
+   <li class="list"><a href="/deletegroup">Delete Group</a> 
+   </li>
+
+   <li class="list"><a href="/updategroup">Update Group</a> 
+   </li>
+
+  <li class="list"><a href="/product">Product</a> 
+      <ul class="items">
+          <li> <a href="#" >Product Owner</a></li>
+         <li> <a href="#" >Product Name</a></li>
+         <li> <a href="#" >Product Category</a></li>
+         <li> <a href="#" >Product Description</a></li>
+         <li> <a href="#" >Quantity In Stock</a></li>
+      </ul>
+   </li>
 
 
-    <div class="container-fluid">
+   <li class="list"><a href="/logout">Log Out</a> 
+   </li>
+ 
+
+
+<div class="container-fluid">
       <div class="navbar-header">
       </div>
     </div>
@@ -39,3 +78,4 @@
     </div>
   </div>
 
+{{> footer}}

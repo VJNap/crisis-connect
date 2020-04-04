@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+var express = require("express");
+
+var PORT = process.env.PORT || 8080;
+
+var app = express();
+
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
+
+// Parse application body as JSON
+=======
 // Requiring necessary npm packages
 const express = require("express");
 const session = require("express-session");
@@ -10,6 +22,7 @@ const PORT = process.env.PORT || 8080;
 const db = require("./models");
 // Creating express app and configuring middleware needed for authentication
 const app = express();
+>>>>>>> d0f5588b4382c079c0e355d6bcdc6a8a6fde0148
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
