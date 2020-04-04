@@ -1,11 +1,8 @@
-// Requiring path to so we can use relative routes to our HTML files
-var path = require("path");
-var express = require("express");
-var router = express.Router();
-
-
+const path = require("path");
+const express = require("express");
+const router = express.Router();
 // Requiring our custom middleware for checking if a user is logged in
-var isAuthenticated = require("../config/middleware/isAuthenticated");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 
 

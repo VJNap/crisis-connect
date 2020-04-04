@@ -1,6 +1,6 @@
 // Requiring our models and passport as we've configured it
-var db = require("../models");
-var passport = require("../config/passport");
+const db = require("../models");
+const passport = require("../config/passport");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -50,4 +50,88 @@ module.exports = function(app) {
       });
     }
   });
+
+  //Groups API Routes
+
+  app.get("/api/group", function(req, res){
+    db.Group.findAll({}).then(function(group){
+      res.json(group);
+    })
+  })
+  
+  app.post("/api/group", function(req, res){
+    db.Group.create({
+      group_name: req.body.group_name,
+      admin_id: req.body.admin_id
+    }).then(function(group){
+      res.json(group)
+    })
+  })
+
+  app.put("/api/group", function(req, res){
+    db.Group.update({
+      group_name: req.body.group_name,
+      admin_id: req.body.admin_id
+    },
+    {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(group){
+      res.json(group)
+    })
+  })
+
+  app.delete("/api/group", function(req, res){
+    db.Group.destroy({
+      where: {
+        id: req.body.id
+      }
+    }).then(function(group){
+      res.json(group)
+    })
+  })
+
+//Inventory API Routes
+
+  app.get("/api/inventory", function(req, res){
+    db.Inventory.findAll({}).then(function(items){
+      res.json(items);
+    })
+  })
+  
+  app.post("/api/inventory", function(req, res){
+    db.Inventory.create({
+      product_owner: req.body.product_owner,
+      product_name: req.body.product_name,
+      product_category: req.body.product_category,
+      product_description: req.body.product_description,
+      quantity_in_stock: req.body.quantity_in_stock
+    }).then(function(items){
+      res.json(items)
+    })
+  })
+
+  app.put("/api/inventory", function(req, res){
+    db.Inventory.update({
+      quantity_in_stock: req.body.quantity_in_stock
+    },
+    {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(items){
+      res.json(items)
+    })
+  })
+
+  app.delete("/api/inventory", function(req, res){
+    db.Inventory.destroy({
+      where: {
+        id: req.body.id
+      }
+    }).then(function(items){
+      res.json(items)
+    })
+  })
 };

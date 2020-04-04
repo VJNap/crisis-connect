@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Mesut1907",
-    "database": "inventory_db",
+    "password": null,
+    "database": "crisis_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
